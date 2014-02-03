@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<title>{{ page.title }}</title>
+			<meta name="viewport" content="width=device-width">
+
+            <!-- Google Web Fonts -->
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+			<!-- syntax highlighting CSS -->
+			<link rel="stylesheet" href="/css/syntax.css">
+
+			<!-- Custom CSS -->
+			<link rel="stylesheet" href="/css/main.css">
+
+		</head>
+		<body>
+            
+            <header>
+                <img src="/images/rg_typo_bw.png" alt="">
+            </header>
+			<section class="page">
+                <article class="card feature">
+                    <iframe width="1280" height="720" src="//www.youtube.com/embed/WnPU6HeNsvE" frameborder="0" allowfullscreen></iframe>
+                </article>
+				<article class="card lp-presenter">
+					<iframe width="350" height="350" src="http://bandcamp.com/EmbeddedPlayer/album=3881281177/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://rollergirls.bandcamp.com/album/satisfied-with-less">Satisfied with less by ROLLERGIRLS</a></iframe>
+				</article>
+				<article class="card tour-dates">
+                    <div class="card-head"><h2>TOUR</h2></div>
+                    <p>
+					{% for gig in site.data.gigs %}
+                      <span>{{ gig.date }}</span> <span class="gig-city">{{ gig.city }}</span> - {{ gig.venue | mardonify }} + {{ gig.bands | mardonify }}</span>
+                      {% unless forloop.last %}
+                        <span class="gig-seperator">///</span>
+                      {% endunless %}
+                    {% endfor %}
+                    </p>
+				</article>
+
+
+				<article class="card blog-first">
+                    <div class="card-head"><h2>BLOG</h2></div>
+                    <p>1st Blog Post
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quae animi magnam similique ipsam tempora officiis quaerat corrupti ipsa magni delectus ea! Quisquam, sit, aperiam, soluta repudiandae tenetur nam inventore temporibus saepe repellat culpa asperiores suscipit magnam quis perspiciatis ex labore quibusdam exercitationem tempora esse molestias dolor doloremque hic! Voluptatem, quae, ab iste placeat laborum at quo nemo distinctio perferendis blanditiis impedit commodi! Dignissimos, alias, odio veniam et qui numquam facere iusto quod minima quaerat quos dolores iste nemo explicabo adipisci aliquid temporibus repudiandae. Accusamus, veritatis, non, vel quae quo repudiandae nesciunt et assumenda voluptate eaque impedit blanditiis quidem odio numquam magnam iste adipisci expedita sapiente rem obcaecati eos temporibus debitis modi vero quaerat suscipit ad quia doloremque esse labore. Ipsa, explicabo, quis libero repellat ab autem beatae sapiente recusandae saepe eos. Aut dolorem assumenda exercitationem eum architecto vel nostrum blanditiis. Nesciunt, quas, ullam, facere commodi velit dolore ratione quo nostrum inventore eaque voluptatibus dolorum eveniet ut. Fugiat, at, optio, nobis ad harum porro animi ea deserunt dicta ipsam distinctio repudiandae numquam quisquam illum culpa iusto voluptas. Soluta, provident, officiis, consectetu!</p>
+                </article>
+				<article class="card blog-posts">blog posts <br>blog posts <br>blog posts <br>blog posts <br>blog posts <br></article>
+				<article class="shop">shop</div></article>
+
+				
+
+
+				
+			</section>
+            <footer>
+                footer
+            </footer>
+            <script TYPE="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript">
+                // iframes
+                var $iframes = $( document.querySelectorAll( 'iframe' ) );
+
+                function iframeSizing() {
+                    var $this           = $( this ),
+                        width           = $this.width(),
+                        height          = $this.height(),
+                        containerWidth      = $this.parent().width(),
+                        heightRatio     = height / width,
+                        newHeight       = heightRatio * containerWidth;
+
+                    $this.width( containerWidth );
+                    $this.height( newHeight );
+                }
+
+                function iframesEachSizing() {
+                    $iframes.each( iframeSizing );
+                };
+
+                iframesEachSizing();
+
+
+                $( window ).resize( iframesEachSizing );
+            </script>
+		</body>
+</html>

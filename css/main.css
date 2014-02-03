@@ -1,0 +1,306 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+/* line 17, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Global Reset */
+/* line 18, ../sass/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 23, ../sass/main.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 29, ../sass/main.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 31, ../sass/main.scss */
+body {
+  background-color: #353535;
+  color: slategrey;
+  font-family: 'Inconsolata', 'Courier New', monospaced;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+/* line 39, ../sass/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+/* line 42, ../sass/main.scss */
+h1 {
+  margin-bottom: 1em;
+}
+
+/* line 43, ../sass/main.scss */
+p {
+  margin: 1em 0.5em;
+}
+
+/* line 45, ../sass/main.scss */
+a {
+  color: #00a;
+}
+
+/* line 46, ../sass/main.scss */
+a:hover {
+  color: #000;
+}
+
+/* line 47, ../sass/main.scss */
+a:visited {
+  color: #a0a;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+/* line 58, ../sass/main.scss */
+.page {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 59em) {
+  /* line 58, ../sass/main.scss */
+  .page {
+    max-width: 59em;
+  }
+}
+/* line 60, ../sass/main.scss */
+.page header {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 63, ../sass/main.scss */
+.page footer {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 66, ../sass/main.scss */
+.page article.lp-presenter {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 49em) {
+  /* line 66, ../sass/main.scss */
+  .page article.lp-presenter {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 74, ../sass/main.scss */
+.page article.tour-dates {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 49em) {
+  /* line 74, ../sass/main.scss */
+  .page article.tour-dates {
+    width: 57.62712%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 80, ../sass/main.scss */
+.page article.blog-first {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 83, ../sass/main.scss */
+.page article.blog-posts {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 49em) {
+  /* line 83, ../sass/main.scss */
+  .page article.blog-posts {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 87, ../sass/main.scss */
+.page article.shop {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 49em) {
+  /* line 87, ../sass/main.scss */
+  .page article.shop {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 93, ../sass/main.scss */
+.page {
+  position: relative;
+}
+/* line 95, ../sass/main.scss */
+.page > * {
+  margin-bottom: 1em;
+}
+
+/* line 100, ../sass/main.scss */
+.card {
+  background-color: ghostwhite;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+  /* WebKit */
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+  /* Firefox */
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+  /* Standard */
+  overflow: hidden;
+}
+/* line 107, ../sass/main.scss */
+.card .card-head {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+}
+/* line 111, ../sass/main.scss */
+.card .card-head h2 {
+  color: ghostwhite;
+  display: none;
+}
+
+/* line 118, ../sass/main.scss */
+header {
+  padding-bottom: 20px;
+}
+/* line 120, ../sass/main.scss */
+header > img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 20px auto;
+}
+
+/* line 131, ../sass/main.scss */
+article.feature iframe {
+  margin-bottom: -8px;
+}
+
+/* line 140, ../sass/main.scss */
+article.tour-dates {
+  font-size: 0.8em;
+  line-height: 1.8em;
+}
+/* line 145, ../sass/main.scss */
+article.tour-dates .card-head {
+  background-image: url("/images/card-head-tour.png");
+}
+/* line 148, ../sass/main.scss */
+article.tour-dates .gig-city {
+  color: black;
+}
+
+/* line 154, ../sass/main.scss */
+article.blog-first .card-head {
+  background-image: url("/images/card-head-blog.png");
+}

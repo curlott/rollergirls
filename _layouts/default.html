@@ -17,28 +17,55 @@
 
 		</head>
 		<body>
-            
+              <div class="navbar-checkbox-container">
+            <input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
+              </div>
+            <nav class="menu">
+              <ul>
+                <li><a href="/#">Home</a></li>
+                <li><a href="/#tour">Tour</a></li>
+                <li><a href="/#video">Video</a></li>
+                <li><a href="/#shop">Shop</a></li>
+              </ul>
+            <label for="navbar-checkbox" class="navbar-handle"></label>
+            </nav>
             <header>
-                <img src="/images/rg_typo_bw.png" alt="">
+                <img src="/images/rg_typo_cream.png" alt="">
             </header>
 			<section class="page">
-                <article class="card feature">
-                    <iframe width="1280" height="720" src="//www.youtube.com/embed/WnPU6HeNsvE" frameborder="0" allowfullscreen></iframe>
-                </article>
 				<article class="card lp-presenter">
 					<iframe width="350" height="350" src="http://bandcamp.com/EmbeddedPlayer/album=3881281177/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://rollergirls.bandcamp.com/album/satisfied-with-less">Satisfied with less by ROLLERGIRLS</a></iframe>
 				</article>
 				<article class="card tour-dates">
                     <div class="card-head"><h2>TOUR</h2></div>
-                    <p>
-					{% for gig in site.data.gigs %}
-                      <span>{{ gig.date }}</span> <span class="gig-city">{{ gig.city }}</span> - {{ gig.venue | mardonify }} + {{ gig.bands | mardonify }}</span>
-                      {% unless forloop.last %}
-                        <span class="gig-seperator">///</span>
-                      {% endunless %}
+                    <table >
+                    
+                    
+
+                    {% assign gigs = site.data.gigs | sort: 'date' | reverse %}
+                    {% for gig in gigs %}
+                        <tr>
+                            <td >
+                                <span>{{ gig.date | date: "%d.%m.%y"}}</span>
+                            </td>
+                            <td >
+                                <span class="gig-city">{{ gig.city }}</span>
+                            </td>
+                            <td >
+                                <span class="gig-venue">{{ gig.venue | mardonify }}</span>
+                            </td>
+                            <td >
+                                <span class="gig-bands">{{ gig.bands | mardonify }}</span>
+                            </td>
+                        </tr>
                     {% endfor %}
-                    </p>
+                    </table>
+
+                    
 				</article>
+                <article class="card feature">
+                    <iframe width="1280" height="720" src="//www.youtube.com/embed/WnPU6HeNsvE" frameborder="0" allowfullscreen></iframe>
+                </article>
 
 
 				<article class="card blog-first">
@@ -82,6 +109,16 @@
 
 
                 $( window ).resize( iframesEachSizing );
+
+                // Menu
+                var $navLinks = $( document.querySelectorAll( 'nav a' ) );
+                var $navCheckbox = $( '#navbar-checkbox' ); 
+
+                function hideMenu () {
+                    $navCheckbox.attr("checked", false);
+                }
+                $navLinks.on('click', hideMenu);
+                $( window ).scroll( hideMenu );
             </script>
 		</body>
 </html>
